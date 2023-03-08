@@ -38,4 +38,15 @@ const requestHandler = (req, res) => {
     //res.end() -> mandatory to end(Done automatically by node js)
 };
 
-module.exports = requestHandler;
+// module.exports = requestHandler;
+
+//If you have multiple exports use below notation
+
+// module.exports = {
+//     handler: requestHandler,
+//     someText: "This is a dummy text"
+// };
+
+//OR
+module.exports.handler = requestHandler;
+module.exports.someText = "This is a dummy text";
